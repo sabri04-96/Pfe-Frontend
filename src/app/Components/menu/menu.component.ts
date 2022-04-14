@@ -18,7 +18,6 @@ export class MenuComponent implements OnInit {
         titre:'Mes Demandes',
         icon:'',
         url: '',
-    
       }
     ]
   },
@@ -35,7 +34,6 @@ export class MenuComponent implements OnInit {
         url: '',
     
       },
-    
       {
         id:'21',
         titre:'Acces WS',

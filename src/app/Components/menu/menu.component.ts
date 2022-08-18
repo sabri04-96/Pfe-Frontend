@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Menu } from './menu';
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,7 @@ export class MenuComponent implements OnInit {
   public menuProp :Array<Menu>=[{
     id:'1', 
     titre:'Tableau de bord',
-    icon:'',
+    icon:'fa-solid fa-table-columns',
     url: '',
     sousMenu:[
       {
@@ -24,7 +25,7 @@ export class MenuComponent implements OnInit {
   {
     id:'2', 
     titre:'Gerer Services',
-    icon:'',
+    icon:'fa-solid fa-gears',
     url: '',
     sousMenu:[
       {
@@ -42,12 +43,37 @@ export class MenuComponent implements OnInit {
     
       }]
 
+  },
+  {
+    id:'3', 
+    titre:'Utilisateurs',
+    icon:'fa-solid fa-users',
+    url: 'persons'
+
+  },
+  {
+    id:'4', 
+    titre:'Departements',
+    icon:'fa-solid fa-house-laptop',
+    url: 'departements'
+
+  },
+  {
+    id:'5', 
+    titre:'Equipes',
+    icon:'fa-solid fa-people-group',
+    url: 'teams'
+
   }
 ]
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
-
+constructor(
+  private router : Router
+){}
+ngOnInit():void{
+}
+navigate(url:any):void{
+  this.router.navigate(url);
+}
 }

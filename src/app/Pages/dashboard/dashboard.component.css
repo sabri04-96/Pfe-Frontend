@@ -1,8 +1,9 @@
 .main-container {
-    margin: 50px;
+    margin: 30px;
+    min-height: 100%;
 }
 
 .min-height-600
 {
-    min-height: 600px;
+    min-height: 100%;
 }

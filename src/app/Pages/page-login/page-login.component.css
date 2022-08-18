@@ -1,4 +1,19 @@
+.full{ min-height: 100%;}
+
 .mycontainer{
+    width: 100%;
     margin-top: 200px;
     max-width: 500px;
+    
 }
+
+.btn-primary{
+    margin-left: 7cm;
+}
+
+.h3{
+    font-family: system-ui;
+    font-weight: bold;
+    
+}
+

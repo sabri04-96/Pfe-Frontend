@@ -2,7 +2,7 @@
 <div class="main-container">
     <div class="row min-height-600 np-flex-wrap">
         <div class="card col-md-2 mr-2 h-25"> 
-            <div class="col h-25">
+            <div class="col h-25 border-none">
                 <img src="assets/ooredoo.jpg" class="img-fluid ">
         </div>
         <div>
@@ -11,19 +11,19 @@
     </div>
         <div class="card col-md-10 pl-0 pr-0 background-grey border-none">
             <div class="col pl-0 pr-0 d-flex flex-column justify-content-between">
-                <div class="card min-height-60 mb-2">
+                <div class="card p-3 min-height-80 mb-2">
 
-                Header
+                <app-header></app-header>
                 </div>
 
                 <div class="card mb-2" style="min-height : 700px">
-                   Container
+                    <router-outlet></router-outlet>
                 </div>
-         <div class="card min-height-60">
-               footer 
+         <div class="card min-height-60" style="text-align:center ;">
+            
+            © 2022 - Tous Droits Rèservès à Ooredoo
          </div>       
     </div>
 </div>
 </div>       
 </div>
-<router-outlet></router-outlet>

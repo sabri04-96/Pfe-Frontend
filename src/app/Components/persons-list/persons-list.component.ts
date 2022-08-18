@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Person } from 'src/app/models/person.model';
 import { PersonService } from 'src/app/services/person.service';
 
@@ -8,6 +8,9 @@ import { PersonService } from 'src/app/services/person.service';
   styleUrls: ['./persons-list.component.css']
 })
 export class PersonsListComponent implements OnInit {
+ @Output()
+ clickEvent = new EventEmitter();
+
   persons?: Person[];
   constructor(private personService: PersonService) { }
   ngOnInit(): void {
@@ -24,5 +27,8 @@ export class PersonsListComponent implements OnInit {
       error: (e) => console.error(e)
     });
   }
+
+
+
 
 }

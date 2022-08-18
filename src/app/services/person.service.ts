@@ -12,4 +12,21 @@ export class PersonService {
   getAll(): Observable<Person[]> {
     return this.http.get<Person[]>(baseUrl+'/Persons');
   }
+
+  addPerson(person: Person): Observable<Person> {
+    return this.http.post('${baseUrl}/Person', person);
+  }
+
+  deletePerson(id: number): Observable<any> {
+    return this.http.delete('${baseUrl}/${id}', {responseType: 'text'});
+  }
+  updatePerson(id: number, value: any): Observable<object> {
+    return this.http.put('${baseUrl}/${id}', value);
+    }
+
+    getPeso(id: number): Observable<any> {
+      return this.http.get('${this.baseUrl}/${id}');
+      }
 }
+
+

@@ -8,6 +8,18 @@ import { PageLoginComponent } from './Pages/page-login/page-login.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { PersonsListComponent } from './Components/persons-list/persons-list.component';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './Components/header/header.component';
+import { NgxFontAwesomeModule } from 'ngx-font-awesome';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { PageRequestsComponent } from './Pages/page-requests/page-requests.component';
+import { DepartementListComponent } from './ADMIN/departement-list/departement-list.component';
+import { TeamListComponent } from './ADMIN/team-list/team-list.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -15,13 +27,21 @@ import { PersonsListComponent } from './Components/persons-list/persons-list.com
     PageLoginComponent,
     DashboardComponent,
     MenuComponent,
-    PersonsListComponent
+    PersonsListComponent,
+    HeaderComponent,
+    PageRequestsComponent,
+    DepartementListComponent,
+    TeamListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    AccordionModule.forRoot(),
+    BrowserAnimationsModule,
+    NgxFontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,11 +10,19 @@ export class PersonService {
 
   constructor(private http: HttpClient) { }
   getAll(): Observable<Person[]> {
-    return this.http.get<Person[]>(baseUrl+'/Persons');
+    return this.http.get<Person[]>(baseUrl+'/Persons', {
+      headers: {
+        'Authorization': `Bearer ${sessionStorage.getItem(`jwttoken`)}`
+      }
+    });
   }
 
-  addPerson(person: Person): Observable<Person> {
-    return this.http.post('${baseUrl}/Person', person);
+  // addPerson(person: Person): Observable<Person> {
+  //   return this.http.post('${baseUrl}/Person', person);
+  // }
+
+  addPerson(body:any){
+    return this.http.post('${baseUrl}/Person', body);
   }
 
   deletePerson(id: number): Observable<any> {

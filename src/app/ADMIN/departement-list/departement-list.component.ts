@@ -16,7 +16,7 @@ export class DepartementListComponent implements OnInit {
   }
   retrieveAll():void
   {
-    this.departementService.getAllDepts()
+    this.departementService.getAllDepartement()
     .subscribe({
       next: (data) => {
         this.departments = data;

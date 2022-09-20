@@ -16,10 +16,13 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { PageRequestsComponent } from './Pages/page-requests/page-requests.component';
 import { DepartementListComponent } from './ADMIN/departement-list/departement-list.component';
 import { TeamListComponent } from './ADMIN/team-list/team-list.component';
-
-
-
-
+import { GraphsComponent } from './ADMIN/graphs/graphs.component';
+import { NgChartsModule } from 'ng2-charts';
+import { MenuUserComponent } from './Components/menu-user/menu-user.component';
+import { DashboardUserComponent } from './Pages/dashboard-user/dashboard-user.component';
+import { GraphUserComponent } from './User/graph-user/graph-user.component';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -32,16 +35,24 @@ import { TeamListComponent } from './ADMIN/team-list/team-list.component';
     PageRequestsComponent,
     DepartementListComponent,
     TeamListComponent,
+    GraphsComponent,
+    MenuUserComponent,
+    DashboardUserComponent,
+    GraphUserComponent,
   ],
   imports: [
     BrowserModule,
+    
+    NgChartsModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
     AccordionModule.forRoot(),
     BrowserAnimationsModule,
     NgxFontAwesomeModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

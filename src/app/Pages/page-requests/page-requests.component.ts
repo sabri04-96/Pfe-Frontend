@@ -8,22 +8,22 @@ import { RequestService } from 'src/app/services/request.service';
   styleUrls: ['./page-requests.component.css']
 })
 export class PageRequestsComponent implements OnInit {
-  requests?: Request[]; 
+ 
+  requests?: any[];
   constructor(private requestService: RequestService) { }
   ngOnInit(): void {
   this.retrieveAll();
   }
   retrieveAll():void
   {
-    this.requestService.getAllRequests()
-    .subscribe({
+    this.requestService.getAllRequests().subscribe({
       next: (data) => {
-     //   this.requests = data;
+        // this.requests = data.filter(a => (a as Request).status === 'CANCELED');
+        this.requests = data.filter(a => (a as Request).status !== 'CANCELED' && (a as Request).status !== 'REJECTED');
         console.log(data);
       },
       error: (e) => console.error(e)
     });
   }
-
 }
 

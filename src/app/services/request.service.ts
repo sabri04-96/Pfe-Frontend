@@ -9,7 +9,11 @@ export class RequestService {
   
   constructor(private http: HttpClient) { }
   getAllRequests(): Observable<Request[]> {
-    return this.http.get<Request[]>(baseUrl+'/Requests');
+    return this.http.get<Request[]>(baseUrl+'/Requests', {
+      headers: {
+        'Authorization': `Bearer ${sessionStorage.getItem(`jwttoken`)}`
+      }
+    });
   }
- 
+
 }

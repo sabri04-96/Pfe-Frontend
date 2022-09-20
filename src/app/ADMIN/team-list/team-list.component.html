@@ -1,7 +1,7 @@
 
 <div class="addnew">
     <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#AddModal">
-      <i class="fa-solid fa-circle-plus"></i>&nbsp; Ajouter Un Departement
+      <i class="fa-solid fa-circle-plus"></i>&nbsp; Ajouter Une èquipe
       </button>
       &nbsp;&nbsp;
   </div>
@@ -14,8 +14,7 @@
                   <th>Nom</th>
                   <th>Email</th>
                   <th>Departement</th>
-                  <th>date de creation</th>
-                  <th>date de derniere modification</th>
+
                   </tr>
           </thead>
           <tbody>
@@ -24,50 +23,59 @@
                   <td>{{team.name}}</td>
                   <td> {{team.email}}</td>
                   <td> {{team.departement?.name}}</td>
-                  <td> {{team.creationDate}}</td>
-                  <td>{{team.lastUpdatDate}}</td>
                   <td> 
    <!-- boutons action-->
   
   
                     <!-- Update Modal -->
                     <div class="modal fade" id="UpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">Mettre a jour le departement</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                           
-                              <form>
-                                  <!-- 2 column grid layout with text inputs for the first and last names -->
-                                  <div class="row mb-4">
-                                    <div class="col">
-                                      <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" value={{team.name}}/>
-                                        <label class="form-label" for="form6Example1">Nom</label>
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h2 class="modal-title" id="exampleModalLabel">Modifier l'èquipe</h2>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                             
+                                <form>
+                                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                                    <div class="row mb-4">
+                                      <div class="col">
+                                        <div class="form-outline">
+                                          <input type="text" id="form6Example1" class="form-control" />
+                                          <label class="form-label" for="form6Example1">Nom</label>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col">
+                                        <div class="form-outline">
+                                          <input type="text" id="form6Example2" class="form-control" />
+                                          <label class="form-label" for="form6Example2">email</label>
+                                        </div>
                                       </div>
                                     </div>
-                                    <div class="col">
-                                      <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" value={{team.description}}/>
-                                        <label class="form-label" for="form6Example2">Prènom</label>
+                                  
+                                  
+                                     <!-- Text input -->
+                                     <div class="form-outline mb-4">
+                                        <select type="text" id="form6Example4" class="form-control">
+                                            <option value="app">DSI app client</option>
+                                            <option value="in">DSI IN</option>
+                                            <option value="Billing">Support Billing</option>
+                                            <option value="info">Info Services</option>
+                                          </select>
+                                        <label class="form-label" for="form6Example4">Departement</label>
                                       </div>
-                                    </div>
-                                  </div>
-                                
-                                                </form>
-                  
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                            <button type="button" class="btn btn-primary">Confirmer</button>
+                                  </form>
+                    
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                              <button type="button" class="btn btn-primary">Confirmer</button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  
+                      </div>  
                   
                   
                   
@@ -122,7 +130,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title" id="exampleModalLabel">Ajouter un Departement</h2>
+            <h2 class="modal-title" id="exampleModalLabel">Ajouter une èquipe</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -136,48 +144,25 @@
                         <label class="form-label" for="form6Example1">Nom</label>
                       </div>
                     </div>
+                    
                     <div class="col">
                       <div class="form-outline">
                         <input type="text" id="form6Example2" class="form-control" />
-                        <label class="form-label" for="form6Example2">Prenom</label>
+                        <label class="form-label" for="form6Example2">email</label>
                       </div>
                     </div>
                   </div>
                 
-                  <!-- Text input -->
-                  <div class="form-outline mb-4">
-                    <input type="text" id="form6Example3" class="form-control" />
-                    <label class="form-label" for="form6Example3">Email</label>
-                  </div>
-                
-                  <!-- Text input -->
-                  <div class="form-outline mb-4">
-                    <input type="tel" id="form6Example4" class="form-control" />
-                    <label class="form-label" for="form6Example4">telephone</label>
-                  </div>
-                
-                
-                  <!-- Number input -->
-                  <div class="form-outline mb-4">
-                    <input type="number" id="form6Example6" class="form-control" />
-                    <label class="form-label" for="form6Example6">matricule</label>
-                  </div>
-                
-                      <!-- Text input -->
-                      <div class="form-outline mb-4">
-                          <input type="text" id="form6Example4" class="form-control" />
-                          <label class="form-label" for="form6Example4">equipe</label>
-                        </div>
                 
                    <!-- Text input -->
                    <div class="form-outline mb-4">
                       <select type="text" id="form6Example4" class="form-control">
-                          <option value="MEMBRE">MEMBRE</option>
-                          <option value="ADMIN">ADMIN</option>
-                          <option value="APPROBATEUR">APPROBATEUR</option>
-  
-                      </select>
-                      <label class="form-label" for="form6Example4">Role</label>
+                          <option value="app">DSI app client</option>
+                          <option value="in">DSI IN</option>
+                          <option value="Billing">Support Billing</option>
+                          <option value="info">Info Services</option>
+                        </select>
+                      <label class="form-label" for="form6Example4">Departement</label>
                     </div>
                 </form>
   

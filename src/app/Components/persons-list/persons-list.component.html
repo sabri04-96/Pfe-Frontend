@@ -17,7 +17,6 @@
                 <th>telephone</th>
                 <th>date de creation</th>
                 <th>date de derniere modification</th>
-                <th>role</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +28,6 @@
                 <td> {{person.phoneNumber}}</td>
                 <td> {{person.creationDate}}</td>
                 <td> {{person.lastUpdatDate}}</td>
-                <td> {{person.role}}</td>
                 <td> 
  <!-- boutons action-->
 
@@ -157,7 +155,7 @@
 
 
   <!-- ADD Modal -->
-  <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div  class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -223,7 +221,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">Confirmer</button>
+          <button type="submit" class="btn btn-primary">Confirmer</button>
         </div>
       </div>
     </div>

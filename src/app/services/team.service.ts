@@ -7,11 +7,17 @@ const baseUrl = 'http://localhost:8080/accessmanager';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TeamService {
 
   constructor(private http: HttpClient) { }
-  getAllTms(): Observable<Team[]> {
-    return this.http.get<Team[]>(baseUrl+'/Teams');
+  getAllTeams(): Observable<Team[]> {
+    return this.http.get<Team[]>(baseUrl+'/Teams', {
+      headers: {
+        'Authorization': `Bearer ${sessionStorage.getItem(`jwttoken`)}`
+      }
+    });
   }
-
 }
+
+

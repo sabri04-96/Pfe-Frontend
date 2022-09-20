@@ -8,7 +8,6 @@ email?:any;
 phoneNumber?:any;
 registrationNumber?:any;
 credentials?:any;
-role?:any;
 team?:Team;
 creationDate?:any;
 lastUpdatDate?:any;

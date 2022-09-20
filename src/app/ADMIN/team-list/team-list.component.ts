@@ -17,7 +17,7 @@ export class TeamListComponent implements OnInit {
   }
   retrieveAll():void
   {
-    this.teamService.getAllTms()
+    this.teamService.getAllTeams()
     .subscribe({
       next: (data) => {
         this.teams = data;

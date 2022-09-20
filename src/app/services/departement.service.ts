@@ -7,10 +7,12 @@ const baseUrl = 'http://localhost:8080/accessmanager';
   providedIn: 'root'
 })
 export class DepartementService {
-
-  constructor(private http: HttpClient) { }
-  getAllDepts(): Observable<Departement[]> {
-    return this.http.get<Departement[]>(baseUrl+'/Departements');
-  }
-
+constructor(private http: HttpClient) { }
+getAllDepartement(): Observable<Departement[]> {
+  return this.http.get<Departement[]>(baseUrl+'/Departements', {
+    headers: {
+      'Authorization': `Bearer ${sessionStorage.getItem(`jwttoken`)}`
+    }
+  });
+}
 }

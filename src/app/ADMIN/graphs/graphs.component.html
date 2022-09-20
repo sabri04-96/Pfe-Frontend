@@ -1,0 +1,22 @@
+<table class="table">
+  <tr>
+    <td>
+<div class="hello" style="display: block;">
+  <h2> Nombre des Demandes par mois  </h2>
+    <canvas baseChart width="400" height="400"
+      [type]="'line'"
+      [data]="lineChartData"
+      [options]="lineChartOptions"
+      [legend]="lineChartLegend">
+    </canvas>
+  </div>
+</td>
+<td>
+  <div class="test" style="display: block;">
+  <h2> Nombre des Demandes par equipe </h2>
+    <canvas #pieCanvas ></canvas>
+    <hr>
+</div>
+</td>
+</tr>
+</table>

@@ -23,6 +23,7 @@ import { DashboardUserComponent } from './Pages/dashboard-user/dashboard-user.co
 import { GraphUserComponent } from './User/graph-user/graph-user.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { UserRequestListComponent } from './Components/user-request-list/user-request-list.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MenuUserComponent,
     DashboardUserComponent,
     GraphUserComponent,
+    UserRequestListComponent,
   ],
   imports: [
     BrowserModule,

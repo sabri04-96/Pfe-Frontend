@@ -14,13 +14,13 @@ export class MenuUserComponent implements OnInit {
     id:'1', 
     titre:'Tableau de bord',
     icon:'fa-solid fa-table-columns',
-    url: 'graphs'
+    url: 'mygraph'
   },
   {
     id:'2', 
     titre:'Mes Demandes',
     icon:'fa-solid  fa-table-cells',
-    url: 'requests'
+    url: 'userrequests'
 }
 ]
 
